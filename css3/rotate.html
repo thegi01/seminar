@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>rotate</title>
+	<style>
+		.wrap > div {
+			width: 110px; height: 110px;
+			margin: 30px;
+			border: 1px solid gray;
+			background: url('img/rose.jpg') no-repeat center;
+		}
+		.st1:hover {transform:rotate(90deg);}
+		.st2:hover {transform:rotate(180deg);}
+		.st3:hover {transform:rotate(-180deg);}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="st1">90</div>
+		<div class="st2">180</div>
+		<div class="st3">-90</div>
+	</div>
+</body>
+</html>

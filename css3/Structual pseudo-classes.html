@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Structual pseudo-classes</title>
+	<style>
+		li:nth-child(2) {color: blue; font-weight: 900;}
+		/*li:nth-of-type(2) {color: red; font-weight: 900;}
+		li:first-of-type {color: green; font-weight: 900;}*/
+		li:only-child {color: red; font-weight: 900;}
+		li:only-of-type {background: yellow;}
+		li:empty {background: white;}
+		li:not([id='id9']) {border-bottom: solid 1px gray;}
+	</style>
+</head>
+<body onload="load()">
+
+	<ul>
+		<li id="id1">id1</li>
+		<li id="id2">id2</li>
+		<li id="id3">id3</li>
+		<li id="id4">id4</li>
+	</ul>
+	<ul>
+		<li id="id5">id5</li>
+		<li id="id6">id6</li>
+		<li id="id7">id7</li>
+		<li id="id8">id8</li>
+	</ul>
+	<ul>
+		<li id="id9">id9</li>
+	</ul>
+	<ul> 텍스트
+		<li id="id10"></li>
+	</ul>
+
+	<script>
+		function load(){
+			var nodes = document.querySelectorAll('li:nth-child(2)');
+			console.log(nodes);
+		}	
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>column-fill</title>
+	<style>
+		div {overflow:hidden;  margin:10px;}
+		p {
+			float: left; margin-right: 20px;
+			width:100px; height: 100px; border: 2px solid gray;
+		}
+		.st1 {background: linear-gradient(white, black);}
+		.st2 {background: linear-gradient(to right, white 30%, black 70%);}
+		.st3 {background: linear-gradient(to left, white, black);}
+		.st4 {background: linear-gradient(to top, white, black);}
+
+		.st1a {background: linear-gradient(0deg, white, black);}
+		.st2a {background: linear-gradient(90deg, white, black);}
+		.st3a {background: linear-gradient(180deg, white, black);}
+		.st4a {background: linear-gradient(270deg, white, black);}
+		
+		.st1b {background: linear-gradient(0deg, white, black);}
+		.st2b {background: linear-gradient(-90deg, white, black);}
+		.st3b {background: linear-gradient(-180deg, white, black);}
+		.st4b {background: linear-gradient(-270deg, white, black);}
+
+		.st5 {border-color: yellow; background: linear-gradient(white, yellow  30%, green);}
+		.st6 {border-color: gray; background: linear-gradient(red, orange, yellow, green, blue, violet);}
+		.st7 {border-color: yellow; background: linear-gradient(to top right, white, yellow, green);}
+		.st8 {border-color: yellow; background: linear-gradient(to bottom left, white, yellow, green);}
+		
+		.st9 {border-color: yellow; background: repeating-linear-gradient(white, green 20px);}
+		.st10 {border-color: yellow; background: repeating-linear-gradient(white, yellow 20px, green 50px);}
+	</style>
+</head>
+<body>
+	<div>
+		<p class="st1"></p>
+		<p class="st2"></p>
+		<p class="st3"></p>
+		<p class="st4"></p>
+	</div>
+	<div>
+		<p class="st1a"></p>
+		<p class="st2a"></p>
+		<p class="st3a"></p>
+		<p class="st4a"></p>
+	</div>
+	<div>
+		<p class="st1b"></p>
+		<p class="st2b"></p>
+		<p class="st3b"></p>
+		<p class="st4b"></p>
+	</div>
+	<div>
+		<p class="st5"></p>
+		<p class="st6"></p>
+		<p class="st7"></p>
+		<p class="st8"></p>
+	</div>
+	<div>
+		<p class="st9"></p>
+		<p class="st10"></p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>radial-gradient</title>
+	<style>
+		div {overflow:hidden;  margin:10px;}
+		p {
+			float: left; margin-right: 20px;
+			width:150px; height: 100px; border: 2px solid gray;
+		}
+		.st1 {background: radial-gradient(circle, white, green);}
+		.st2 {background: radial-gradient(ellipse, white, green);}
+
+		.st3 {background: radial-gradient(circle, white, yellow, orange, red);}
+		.st4 {background: radial-gradient(ellipse, white, yellow, orange, red);}
+
+		.st5 {background: radial-gradient(50px 50px at 75px 50px, white, yellow, green, black);}
+		.st6 {background: radial-gradient(30px 20px at 40px 70px, white, yellow, green, black);}
+		
+		.st7 {background: -webkit-radial-gradient(60% 55%, closest-side, blue,green,yellow,black); }
+		.st8 {background: -webkit-radial-gradient(50% 50%, closet-corner, white,  black);}
+
+		.st9 {background: -webkit-radial-gradient(60% 55%, farthest-side,blue,green,yellow,black);}
+		.st10 {background: -webkit-radial-gradient(60% 55%, farthest-corner,blue,green,yellow,black);}
+		
+		.st11 {background: repeating-radial-gradient(white, black 30px);}
+		.st12 {background: repeating-radial-gradient(white, yellow 20px, black 50px);}
+
+	</style>
+</head>
+<body>
+	<div>
+		<p class="st1"></p>
+		<p class="st2"></p>
+	</div>
+	<div>
+		<p class="st3"></p>
+		<p class="st4"></p>
+	</div>
+	<div>
+		<p class="st5"></p>
+		<p class="st6"></p>
+ 	</div>
+	<div>
+		<p class="st7"></p>
+		<p class="st8"></p>
+ 	</div>
+	<div>
+		<p class="st9"></p>
+		<p class="st10"></p>
+	</div>
+	<div>
+		<p class="st11"></p>
+		<p class="st12"></p>
+	</div>
+</body>
+</html>

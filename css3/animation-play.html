@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>animation control</title>
+	<style>
+		.object {
+			position: relative;
+			width: 300px; height: 80px;
+			margin: 30px;
+			border: 1px solid gray;
+		}
+		.object img {
+			animation-name:trans;
+			animation-duration:1s;
+			animation-iteration-count:infinite;
+			animation-direction:alternate;
+		}
+		@keyframes trans {
+			0%   {transform:translate(0);}
+		    100% {transform:translate(220px, 0);}
+		}
+		.paused {animation-play-state:paused;}
+		.running {animation-play-state:running;}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div  id="object" class="object"><img src="img/rose.jpg" alt=""></div>
+		<div class="control">
+			<input type="radio" name="control" id="play"><label for="play">play</label>
+			<input type="radio" name="control" id="stop"><label for="stop">stop</label>
+		</div>
+	</div>
+	<script>
+		function addEvent(id) {
+			var radio = document.getElementById(id);
+			radio.addEventListener('click', function(e){
+				var object = document.getElementById('object').firstElementChild;
+				object.className = e.currentTarget.getAttribute('id') == 'play' ? 'running' : 'paused';
+			}, false);
+		}
+		addEvent('play'); addEvent('stop');
+	</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>skew</title>
+	<style>
+		.wrap > div {
+			width: 200px; height: 110px;
+			margin: 30px;
+			border: 1px solid gray;			
+		}
+		.inner {width:100%; height:100%; background: url('img/rose3.jpg') no-repeat center;}
+		.st1:hover .inner {transform:skewX(20deg);}
+		.st2:hover .inner {transform:skewY(20deg);}
+		.st3:hover .inner {transform:skew(20deg, 20deg);}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="st1"><div class="inner">skewX</div></div>
+		<div class="st2"><div class="inner">skewY</div></div>
+		<div class="st3"><div class="inner">skew</div></div>
+	</div>
+</body>
+</html>

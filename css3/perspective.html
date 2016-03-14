@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>transform-origin</title>
+	<style>
+		.wrap > div {
+			position: relative;
+			width: 200px; height: 200px;
+			margin: 30px;ㅔ
+			border: 1px solid gray;
+			background-color: gray;
+		}
+		.inner {
+			position: absolute; top:25px; left: 25px;
+			width: 150px; height: 150px;
+			background-color: green;
+		}
+		.wrap > div:hover .inner {transform:rotateX(45deg);}
+		.st1:hover {perspective:200px;-webkit-perspective:200px;}
+		.st2:hover {perspective:120px;-webkit-perspective:120px;}
+		.st3:hover {perspective:100px;-webkit-perspective:100px;}
+
+		.st4:hover {perspective:200px;-webkit-perspective:200px; perspective-origin:75px 75px;}
+		.st5:hover {perspective:120px;-webkit-perspective:120px; perspective-origin:100px 75px;}
+		.st6:hover {perspective:100px;-webkit-perspective:100px; perspective-origin:75px 100px;}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="st1"><div class="inner">200px</div></div>
+		<div class="st2"><div class="inner">120px</div></div>
+		<div class="st3"><div class="inner">100px</div></div>
+	</div>
+	<div class="wrap">
+		<div class="st4"><div class="inner">200px</div></div>
+		<div class="st5"><div class="inner">120px</div></div>
+		<div class="st6"><div class="inner">100px</div></div>
+	</div>
+</body>
+</html>

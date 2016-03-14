@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>skew</title>
+	<style>
+		.wrap > div {
+			width: 150px; height: 84px;
+			margin: 30px;	
+			background: url('img/rose3.jpg') no-repeat center;
+			background-size: cover;
+		}
+		.st1:hover {transform:matrix(1.5, 0, 0, 1.5, 0, 0);}
+		.st2:hover {transform:matrix(1, 0.3, 0.3, 1, 0, 0);}
+		.st3:hover {transform:matrix(1, 0, 0, 1, 150, 50);}
+		.st4:hover {transform:matrix(1.5, 0.3, 0.3, 1.5, 150, 50);}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="st1">scale</div>
+		<div class="st2">skew</div>
+		<div class="st3">translate</div>
+		<div class="st4">all</div>
+	</div>
+</body>
+</html>

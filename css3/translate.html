@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>translate</title>
+	<style>
+		.wrap > div {
+			position:relative;
+			width:100px; height:80px;
+			margin: 20px;
+			border: 1px solid gray;
+		}
+		.wrap .inner {position: absolute; top: 0; left: 0;}
+		.st1:hover .inner {transform:translate(200px, 190px);}
+		.st2:hover .inner {transform:translateX(200px);}
+		.st3:hover .inner {transform:translateY(200px);}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="st1"><div class="inner">xy<img src="img/rose.jpg" alt=""></div></div>
+		<div class="st2"><div class="inner">x<img src="img/rose.jpg" alt=""></div></div>
+		<div class="st3"><div class="inner">y<img src="img/rose.jpg" alt=""></div></div>
+	</div>
+</body>
+</html>

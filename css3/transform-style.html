@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>transform-origin</title>
+	<style>
+		.wrap > div {
+			position: relative;
+			width: 150px; height: 150px;
+			margin: 30px;ㅔ
+			border: 1px solid gray;
+			perspective:400px;
+		}
+		.inner {
+			position: absolute; top:10px; left: 10px;
+			width: 150px; height: 150px;
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="st1"><div class="inner"><div class="in">flat</div></div></div>
+		<div class="st2"><div class="inner"><div class="in">perspectie-3d</div></div></div>
+	</div>
+</body>
+</html>

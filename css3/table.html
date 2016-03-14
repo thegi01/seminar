@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>table</title>
+	<style>
+		table {
+			width:50%; margin:50px;
+			table-layout: fixed;		
+		}
+		th, td {border: solid 1px black;}
+		.second {border-spacing: 10px; empty-cells: hide;}
+	</style>
+</head>
+<body>
+	<table style="border-collapse:collapse;">
+		<thead>
+			<caption style="caption-side:top">caption top</caption>
+			<tr>
+				<tH>thd</tH>
+				<td>tdd</td>
+				<tH>thd</tH>
+				<td>tdd</td>
+			</tr>
+		</thead>
+	</table>
+
+	<table class="second" style="border-collapse:seperate;">
+		<thead>
+			<caption style="caption-side:BOTTOM">caption BOTTOM</caption>
+			<tr>
+				<tH>thd</tH>
+				<td>tdd</td>
+				<tH></tH>
+				<td>tdd</td>
+			</tr>
+		</thead>
+	</table>
+</body>
+</html>
