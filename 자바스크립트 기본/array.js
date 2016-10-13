@@ -6,4 +6,5 @@ window.onload = function(){
 	}
 	output.push('</ul>');
 	document.body.innerHTML = output.join('');
+
 }

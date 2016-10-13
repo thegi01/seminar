@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>every | Array | JavaScript</title>
+</head>
+<body>
+	<dl>
+		<dt>출처</dt>
+		<dd>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every</dd>
+	</dl>
+<script>
+/* Testing size of all array elements */
+// The following example tests whether all elements in the array are bigger than 10.
+console.log('\n');
+console.log('* Testing size of all array elements');
+function isBigEnough(element, index, array) {
+	return element >= 10;
+}
+console.log( [12, 5, 8, 130, 44].every(isBigEnough) );		// false
+console.log( [12, 54, 18, 130, 44].every(isBigEnough) );	// true
+
+/* Using arrow function */
+// Arrow functions provide a shorter syntax for the same test.
+console.log('\n');
+console.log('* Using arrow function');
+console.log( [12, 5, 8, 130, 44].every(elem => elem >= 10));	// false
+console.log( [12, 54, 18, 130, 44].every(elem => elem >= 10));	// true
+</script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>forEach | Array | JavaScript</title>
+</head>
+<body>
+	<dl>
+		<dt>출처</dt>
+		<dd>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach</dd>
+	</dl>
+
+<script>
+
+/* Printing the contents of an array */
+// The following code logs a line for each element in an array:
+console.log('* Printing the contents of an array ');
+function logArrayElements(element, index, array){
+	console.log('array['+ index + '] = ' + element);
+}
+// Notice that index 2 is skipped since there is no item at
+// that position in the array.
+[2, 5, , 9].forEach(logArrayElements);
+// logs:
+// a[0] = 2
+// a[1] = 5
+// a[3] = 9
+
+
+/* Using thisArg */
+// The following (contrived) example updates an object's properties from each entry in the array:
+console.log('\n');
+console.log('* Using thisArg');
+function Counter(){
+	this.sum = 0;
+	this.count = 0;
+}
+Counter.prototype.add = function(array) {
+	array.forEach(function(entry) {
+		this.sum += entry;
+		++this.count;
+	}, this);
+};
+var obj = new Counter();
+obj.add([2, 5, 9]);
+console.log( 'count',  obj.count ) 	// 3
+console.log( 'sum', obj.sum ) 		// 16
+// Since the thisArg parameter (this) is provided to forEach(), 
+// it is passed to callback each time it's invoked, for use as its this value.
+
+
+/* An object copy functin */
+// The following code creates a copy of a given object. 
+// There are different ways to create a copy of an object, 
+//  the following is just one way and is presented to explain 
+// how Array.prototype.forEach() works by using ECMAScript 5 Object.* meta property functions.
+console.log('\n');
+console.log('* An object copy functin');
+function copy(obj){
+	var copy = Object.create(Object.getPrototypeOf(obj));
+	var propNames = Object.getOwnPropertyNames(obj);
+
+	propNames.forEach(function(name){
+		var desc = Object.getOwnPropertyDescriptor(obj, name);
+		Object.defineProperty(copy, name, desc);
+	});
+	return copy;
+}
+var obj1 = { a:1, b:2 };
+var obj2 = copy(obj1);	// obj2 looks like obj1 now
+console.log(obj2);
+
+/* forEach() does not make a copy of the array before iterating */
+// If the array is modified during iteration, other elements might be skipped.
+// The following example logs "one", "two", "four". 
+// When the entry containing the value "two" is reached, 
+// the first entry of the whole array is shifted off, 
+// which results in all remaining entries moving up one position. 
+// Because element "four" is now at an earlier position in the array,
+//  "three" will be skipped. 
+// forEach() does not make a copy of the array before iterating.
+console.log('\n');
+console.log('* forEach() does not make a copy of the array before iterating');
+var words = ["one", "two", "three", "four"];
+words.forEach(function(word){
+	console.log(word);
+	if( word == "two" ){
+		words.shift();
+	}
+});
+console.log(words);
+
+</script>
+
+
+</body>
+</html>
